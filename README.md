@@ -1,0 +1,2 @@
+# Differential Drive Robot Object Tracking
+The purpose of the project is to simulate "Pioneer" dd robot in Coppeliasim(Vrep) that can track a specified object based on its color. The project has been implemented in Python programming language. The information exchange between Coppeliasim and Python has been established through "remote API". The information exchange between Python codes has been done by impleneting ROS.
