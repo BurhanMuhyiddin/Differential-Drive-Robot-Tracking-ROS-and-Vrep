@@ -10,7 +10,7 @@ import matplotlib.pyplot as mlp
 import math
 
 def image_processor(clientID):
-    pub = rospy.Publisher('center', Float64, queue_size=10)
+    pub = rospy.Publisher('offset', Float64, queue_size=10)
     rospy.init_node('image_processor_node')
     rate = rospy.Rate(10)
     res, handle_cam = sim.simxGetObjectHandle(clientID, "cam", sim.simx_opmode_blocking)
@@ -41,7 +41,7 @@ def image_processor(clientID):
 
                     #cv2.line(img, (int(x_medium), 0), (int(x_medium), resolution[0]), (0, 0, 255), 1)
                 else:
-                    pub.publish(999999999.0)
+                    pub.publish(0.0)
                 rate.sleep()
 
                 #cv2.imshow('image', img)
